@@ -6,7 +6,12 @@
 //});
 
 //2. 設定 Route 回傳 view
+//Route::get('/',function(){
+    //return view('welcome');
+//});
+
+//3. 設定 Route 跳轉頁面
 Route::get('/',function(){
-    return view('welcome');
+    return redirect('welcome');
 });
 
