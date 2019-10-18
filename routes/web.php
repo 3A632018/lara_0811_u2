@@ -27,12 +27,17 @@ Route::get('/',function(){
 //});
 
 //4-1. 將 Route 取名為 hello.index
-//Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    //return'Hello,'.$name;
+Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
+    return'Hello,'.$name;
 }]);
 
 //3. 修改 Route 裡的路徑
-Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
-    return view('welcome');
-}]);
+//Route::get('say/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
+    //return view('welcome');
+//}]);
+
+//5-1. 設定 dashboard路徑的 Route
+Route::get('dashboard',function(){
+    return'dashboard';
+});
 
