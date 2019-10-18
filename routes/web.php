@@ -37,13 +37,17 @@ Route::get('hello/{name?}',['as'=>'hello.index',function($name= 'Everybody'){
 //}]);
 
 //5-1. 設定 dashboard路徑的 Route
-Route::get('dashboard',function(){
-    return'dashboard';
-});
+//Route::get('dashboard',function(){
+    //return'dashboard';
+//});
 
 //2. 設定另一個 Route 以群組包起來設定 prefix
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',function(){
-        return'admindashboard';
-    });
-});
+//Route::group(['prefix'=>'admin'],function(){
+    //Route::get('dashboard',function(){
+        //return'admindashboard';
+    //});
+//});
+
+//7-1. 編輯 app/Http/routes.php如：
+Route::get('/',['as'=>'home.index','uses'=>
+    'HomeController@index']);
